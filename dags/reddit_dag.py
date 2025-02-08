@@ -2,7 +2,6 @@ import os
 import sys
 from datetime import datetime
 
-
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
@@ -12,7 +11,7 @@ from pipelines.reddit_pipeline import reddit_pipeline
 
 default_args = {
     'owner': 'Moetez',
-    'start_date': datetime(2025, 2, 4)
+    'start_date': datetime(2025, 2, 8)
 }
 
 file_postfix = datetime.now().strftime("%Y%m%d")
@@ -37,4 +36,3 @@ extract = PythonOperator(
     },
     dag=dag
 )
-

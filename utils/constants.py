@@ -2,7 +2,7 @@ import configparser
 import os
 
 parser = configparser.ConfigParser()
-parser.read(r"C:\Users\Moetez\PycharmProjects\RedditDataEngineering\pythonProject\config\config.conf")
+parser.read('/opt/airflow/config/config.conf')
 
 SECRET = parser.get('api_keys', 'reddit_secret_key')
 CLIENT_ID = parser.get('api_keys', 'reddit_client_id')
