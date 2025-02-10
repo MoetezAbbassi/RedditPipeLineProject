@@ -50,3 +50,4 @@ def transform_data(post_df: pd.DataFrame):
 
 def load_data_to_csv(data: pd.DataFrame, path: str):
     data.to_csv(path, index=False)
+
