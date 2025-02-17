@@ -39,7 +39,7 @@ extract = PythonOperator(
 )
 
 
-# upload to s3
+# upload to s3 bucket
 upload_s3 = PythonOperator(
     task_id='s3_upload',
     python_callable=upload_s3_pipeline,
